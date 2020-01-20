@@ -1,6 +1,6 @@
 Name:		xcb-util-keysyms
-Version:	0.3.9
-Release:	5%{?dist}
+Version:	0.4.0
+Release:	1%{?dist}
 Summary:	Standard X key constants and keycodes conversion on top of libxcb
 Group:		System Environment/Libraries
 License:	MIT
@@ -29,7 +29,7 @@ Development files for xcb-util-keysyms.
 
 
 %build
-%configure --with-pic --disable-static
+%configure --with-pic --disable-static --disable-silent-rules
 make %{?_smp_mflags}
 
 
@@ -61,11 +61,14 @@ rm %{buildroot}%{_libdir}/*.la
 
 
 %changelog
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.3.9-5
-- Mass rebuild 2014-01-24
+* Sat Oct 11 2014 Thomas Moschny <thomas.moschny@gmx.de> - 0.4.0-1
+- Update to 0.4.0.
 
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.3.9-4
-- Mass rebuild 2013-12-27
+* Mon Aug 18 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.3.9-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_22_Mass_Rebuild
+
+* Sun Jun 08 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.3.9-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
 * Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.3.9-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
